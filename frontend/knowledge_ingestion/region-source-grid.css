@@ -1,0 +1,28 @@
+/* Fixed geometry matches region-source-grid.js; the full extent supplies native 2D scrolling. */
+.region-grid-wrap.region-source-grid { position: relative; height: 480px; max-height: 520px; width: 100%; overflow: auto; overscroll-behavior: contain; overflow-anchor: none; background: #fff; border: 1px solid var(--line, #dadada); border-radius: 7px; }
+.region-source-grid:focus-visible { outline: 2px solid #315fbc; outline-offset: 2px; }
+.region-source-extent { position: relative; min-width: 100%; }
+.region-source-cells { position: absolute; inset: 0; z-index: 1; }
+.region-source-columns { position: sticky; top: 0; width: 100%; z-index: 4; background: #f3f3f3; }
+.region-source-corner { position: sticky; left: 0; width: 48px; height: 32px; z-index: 2; background: #ececec; border-right: 1px solid #d0d0d0; border-bottom: 1px solid #d0d0d0; box-sizing: border-box; }
+.region-source-column { position: absolute; top: 0; width: 132px; height: 32px; border-right: 1px solid #d0d0d0; border-bottom: 1px solid #d0d0d0; text-align: center; line-height: 32px; box-sizing: border-box; font-size: 12px; color: #595959; }
+.region-source-rows { position: sticky; left: 0; width: 48px; z-index: 3; background: #f3f3f3; }
+.region-source-row { position: absolute; left: 0; width: 48px; height: 40px; border-right: 1px solid #d0d0d0; border-bottom: 1px solid #dadada; text-align: center; line-height: 40px; box-sizing: border-box; font-size: 12px; color: #595959; }
+.region-source-cell { position: absolute; width: 132px; height: 40px; border-right: 1px solid #dadada; border-bottom: 1px solid #dadada; box-sizing: border-box; overflow: hidden; background: #fff; }
+.region-source-cell .region-cell { display: block; width: 100%; height: 100%; min-height: 0; margin: 0; padding: 8px 10px; border: 0; border-radius: 0; box-sizing: border-box; background: transparent; color: inherit; text-align: left; font-size: 13px; font-weight: 400; line-height: 22px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.region-source-cell .region-cell.region-cell-marked { padding-top: 2px; padding-bottom: 15px; }
+.region-source-cell .region-cell:hover { background: #f2f2f2; }
+.region-source-cell .region-cell:focus-visible { outline: 3px solid #315fbc; outline-offset: -3px; }
+.region-source-cell.region-payload-header .region-cell { background: #e5effa; box-shadow: inset 0 0 0 1px #5587b8; }
+.region-source-cell.region-payload-sample .region-cell { background: #f0f0f0; box-shadow: inset 0 0 0 1px #39538c; }
+.region-source-cell.region-included .region-cell { background: #f0f0f0; box-shadow: inset 0 0 0 1px #39538c; }
+.region-source-cell.region-anchor .region-cell { box-shadow: inset 0 0 0 3px #225dc6; }
+.region-source-cell.region-absent { padding: 0; line-height: 40px; color: #9a9a9a; font-size: 11px; text-align: center; background: #f6f6f6; }
+.region-source-marker { position: absolute; pointer-events: none; left: 10px; bottom: 1px; max-width: 114px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 9px; line-height: 12px; color: #6a6a6a; }
+.region-source-status { position: absolute; left: 54px; top: 38px; width: max-content; max-width: min(390px, calc(100vw - 130px)); padding: 8px 12px; border: 1px solid #d2d2d2; border-radius: 5px; background: #f8f8f8; box-shadow: 0 2px 8px #39496a15; color: #39496a; font-size: 13px; overflow-wrap: anywhere; }
+.region-source-status[hidden] { display: none; }
+.region-source-status .button { display: block; margin-top: 5px; }
+.region-source-error { color: #853e29; background: #fff7f2; border-color: #e1b8a6; }
+@media(max-width:760px) { .region-grid-wrap.region-source-grid { height: 420px; } }
+
+.region-source-cell.region-loading { background: #f9f9f9; }

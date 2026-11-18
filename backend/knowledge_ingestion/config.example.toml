@@ -1,0 +1,32 @@
+# 复制到操作者的私有配置目录，并在 native.toml 的 model_config 写绝对路径。
+# chmod 600 <私有配置路径>；不要提交密钥或在聊天中发送密钥。
+# 显式文件优先于环境；文件存在且 api_key 为空时绝不借用环境中的密钥。
+# 不需要费用账本或预算配置。以下均为本地配置，不能证明真实账户可用。
+[api]
+api_key = ""
+# API 根地址，可带末尾 /；不要填写 /responses、/chat/completions 或 /embeddings。
+base_url = "https://api.openai.com/v1"
+protocol = "responses" # 或 chat_completions；只支持非流式 Bearer API。
+
+# 各功能继承 [api]，可以分别覆盖 api_key/base_url/protocol/model。
+# 显式 api_key="" 只关闭该功能的在线服务；不会从环境恢复密钥。
+# 模型 ID 必须由服务商实际提供。默认名称保留；程序不静默替换模型。
+# Chat 服务须支持函数工具、JSON Schema、max_completion_tokens、reasoning_effort。
+# 本适配器不支持 Chat 内联 PDF/文件、加密推理回传或任意厂商扩展；PDF直读需要 Responses。
+[documents]
+model = "YOUR_TEXT_MODEL_ID"
+
+[research]
+model = "YOUR_TEXT_MODEL_ID"
+
+[table]
+model = "YOUR_TEXT_MODEL_ID"
+
+[wiki]
+model = "YOUR_TEXT_MODEL_ID"
+
+[embedding]
+# 同样可覆盖 api_key/base_url；调用固定 /embeddings，返回 float 数组。
+model = "YOUR_EMBEDDING_MODEL_ID"
+dimensions = 1536
+# 改变服务、模型或维度后索引使用新的身份；不混用旧向量。

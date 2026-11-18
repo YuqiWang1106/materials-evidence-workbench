@@ -1,0 +1,6 @@
+# Separate native parsing environment; never install into the website venv.
+mineru==4.0.9
+docvortex==0.5.5
+onnxruntime==1.30.0
+mineru-llama-cpp==0.1.2
+mineru-vl-utils==2.0.5

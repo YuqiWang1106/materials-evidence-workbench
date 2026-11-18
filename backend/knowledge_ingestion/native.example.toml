@@ -1,0 +1,30 @@
+# Copy outside the repository. TOML paths must be absolute (no ~ or $HOME).
+data_root = "/absolute/private/website-data"
+model_config = "/absolute/private/model-config.toml"
+host = "127.0.0.1"
+port = 8789
+workers = 2
+
+# Optional external Agent access. Use a separate private token file, shared with
+# the MCP connection config. This credential never authorizes website writes.
+# agent_knowledge_token_file = "/absolute/private/knowledge-readonly-token"
+# agent_knowledge_max_response_bytes = 16777216
+
+# New instances generate and persist a stable identity on first serve.
+# Existing instances without .native-workspace.json must set their original ID.
+# workspace_id = "existing-workspace-id"
+
+# Optional until you need to parse new PDFs. Existing readable sources and
+# research do not require the local parser. Never downgrade Standard to Basic.
+# model_root = "/absolute/private/mineru-models"
+# mineru_command = ["/absolute/private/mineru-venv/bin/mineru-kit"]
+# With these two, scanned pages and photos are also read by the local OCR reader (same environment and
+# PP-OCRv6 files). Optional second local reader (PaddleOCR-VL) that double-checks numbers and codes; see
+# backend/knowledge_ingestion/runtime/handwriting/README.md:
+# second_reader_python = "/absolute/private/paddleocr-vl-venv/bin/python"
+# second_reader_model = "/absolute/private/paddleocr-vl-models/PaddleOCR-VL-1.6"
+
+# No budgets, fee ledgers, project ID, research-host.toml or environment tokens
+# are needed. Old entity_budget_root/entity_batch_id are retained only for legacy request evidence; no amount checks or path-existence requirement.
+# An explicitly retained research_config is read only to preserve legacy identity
+# and import request execution states; its historical fee files are never deleted.

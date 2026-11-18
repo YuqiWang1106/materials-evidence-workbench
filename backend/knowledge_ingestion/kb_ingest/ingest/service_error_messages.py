@@ -1,0 +1,11 @@
+"""Stable error messages retained by the ingestion service."""
+
+TABLE_WORKFLOW_MODE = "Unknown table workflow mode"
+INJECTED_MODEL_CLIENT = "Injected model_client is only supported in extractor tests, not in the task service"
+INJECTED_TABLE_CLIENT = "Injected table model_client is not supported in the task service"
+INPUT_STRATEGY = "Unsupported document input strategy"
+RETIRED_TABLE = "旧表格流程已停止，请重新确认读法 / retired"
+PREPARED_V2 = "Prepared documents cannot self-certify v2 source review; use original-source processing"
+REQUIRED_ASSET_BINDING = "Every referenced asset must have an explicit registered binding"
+ASSET_BYTES_MISMATCH = "Evidence asset bytes differ from the declared original"
+PREPARED_TABLE = "表格记录请通过读法确认流程生成，不能从 prepared 绕过确认"

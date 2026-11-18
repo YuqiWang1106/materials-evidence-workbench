@@ -1,0 +1,29 @@
+[
+  {
+    "id": "public-geometry-thickness",
+    "version": "1",
+    "required_conditions": [
+      {
+        "selector": {
+          "field_id": "condition.parameter",
+          "qualifiers": {
+            "property": "thickness",
+            "parameter_label": "thickness",
+            "parameter_id": "source_key:thickness"
+          }
+        },
+        "required": true,
+        "rule": "same_unit_basis"
+      }
+    ],
+    "allowed_differences": [],
+    "allowed_operations": [
+      "side_by_side",
+      "condition_diff"
+    ],
+    "vocabulary": "public-synthetic-v1",
+    "scientific_validation": false,
+    "training_admission": false,
+    "sha256": "1f6cbc54d7f49e8287fdda68cecd305581b1b82e21423b21c4fee52096e88247"
+  }
+]

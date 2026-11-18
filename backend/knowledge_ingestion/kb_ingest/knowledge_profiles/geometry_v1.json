@@ -1,0 +1,36 @@
+{
+  "id": "public-geometry/v1",
+  "catalogue_version": "public-synthetic-v1",
+  "sample_identity_verified_by_collection": false,
+  "mappings": [
+    {
+      "source_label": "thickness",
+      "selector": {
+        "field_id": "condition.parameter",
+        "qualifiers": {
+          "property": "thickness",
+          "parameter_label": "thickness",
+          "parameter_id": "source_key:thickness"
+        }
+      },
+      "catalogue_profile_id": "public-condition-thickness-v1",
+      "mapping_status": "catalogue_declared"
+    },
+    {
+      "source_label": "width",
+      "selector": {
+        "field_id": "observation.value",
+        "qualifiers": {
+          "property": "width",
+          "metric_label": "width",
+          "metric_id": "source_key:width"
+        }
+      },
+      "catalogue_profile_id": "public-observation-width-v1",
+      "mapping_status": "catalogue_declared"
+    }
+  ],
+  "observed_mappings": [],
+  "unsupported": [],
+  "category_aliases": {}
+}

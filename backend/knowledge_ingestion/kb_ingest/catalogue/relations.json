@@ -1,0 +1,137 @@
+{
+  "version": "public-synthetic-v1",
+  "relations": [
+    {
+      "predicate": "contains_sample",
+      "allowed_from_kinds": [
+        "content_unit"
+      ],
+      "allowed_to_kinds": [
+        "sample"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "has_formulation",
+      "allowed_from_kinds": [
+        "sample"
+      ],
+      "allowed_to_kinds": [
+        "formulation"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "contains_component",
+      "allowed_from_kinds": [
+        "formulation"
+      ],
+      "allowed_to_kinds": [
+        "component"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "refers_to_material",
+      "allowed_from_kinds": [
+        "component"
+      ],
+      "allowed_to_kinds": [
+        "material"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "process_applicability",
+      "allowed_from_kinds": [
+        "sample"
+      ],
+      "allowed_to_kinds": [
+        "process_definition"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "tested_by",
+      "allowed_from_kinds": [
+        "sample"
+      ],
+      "allowed_to_kinds": [
+        "reported_test"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "produces_observation",
+      "allowed_from_kinds": [
+        "reported_test"
+      ],
+      "allowed_to_kinds": [
+        "observation"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "observes_subject",
+      "allowed_from_kinds": [
+        "observation"
+      ],
+      "allowed_to_kinds": [
+        "sample"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "uses_method",
+      "allowed_from_kinds": [
+        "reported_test"
+      ],
+      "allowed_to_kinds": [
+        "method_definition"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "about_sample",
+      "allowed_from_kinds": [
+        "claim"
+      ],
+      "allowed_to_kinds": [
+        "sample"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    },
+    {
+      "predicate": "about_study",
+      "allowed_from_kinds": [
+        "claim"
+      ],
+      "allowed_to_kinds": [
+        "content_unit"
+      ],
+      "legacy_aliases": [],
+      "evidence_required": true,
+      "definition": "Public demonstration relationship."
+    }
+  ]
+}

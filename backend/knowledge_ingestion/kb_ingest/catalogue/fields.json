@@ -1,0 +1,203 @@
+{
+  "version": "public-synthetic-v1",
+  "scope": "Illustrative geometry workflow; not a complete scientific vocabulary.",
+  "categories": {
+    "S": "source",
+    "C": "composition",
+    "P": "process",
+    "T": "test",
+    "K": "claim",
+    "E": "evidence"
+  },
+  "fields": [
+    {
+      "field_id": "source.title",
+      "label": "Source title",
+      "definition": "Public demonstration field: source title.",
+      "groups": [],
+      "owner_kinds": [
+        "source"
+      ],
+      "value_kinds": [
+        "text"
+      ],
+      "profile_ids": [],
+      "version": "1"
+    },
+    {
+      "field_id": "study.scope",
+      "label": "Study description",
+      "definition": "Public demonstration field: study description.",
+      "groups": [],
+      "owner_kinds": [
+        "content_unit"
+      ],
+      "value_kinds": [
+        "text"
+      ],
+      "profile_ids": [],
+      "version": "1"
+    },
+    {
+      "field_id": "material.identity",
+      "label": "Sample or material identity",
+      "definition": "Public demonstration field: sample or material identity.",
+      "groups": [],
+      "owner_kinds": [
+        "sample",
+        "material"
+      ],
+      "value_kinds": [
+        "text"
+      ],
+      "profile_ids": [],
+      "version": "1"
+    },
+    {
+      "field_id": "composition.amount",
+      "label": "Component quantity",
+      "definition": "Public demonstration field: component quantity.",
+      "groups": [],
+      "owner_kinds": [
+        "component"
+      ],
+      "value_kinds": [
+        "scalar",
+        "text",
+        "record",
+        "list"
+      ],
+      "profile_ids": [],
+      "version": "1"
+    },
+    {
+      "field_id": "method.name",
+      "label": "Method name",
+      "definition": "Public demonstration field: method name.",
+      "groups": [],
+      "owner_kinds": [
+        "method_definition"
+      ],
+      "value_kinds": [
+        "text"
+      ],
+      "profile_ids": [],
+      "version": "1"
+    },
+    {
+      "field_id": "method.standard",
+      "label": "Method standard",
+      "definition": "Public demonstration field: method standard.",
+      "groups": [],
+      "owner_kinds": [
+        "method_definition"
+      ],
+      "value_kinds": [
+        "text"
+      ],
+      "profile_ids": [],
+      "version": "1"
+    },
+    {
+      "field_id": "condition.parameter",
+      "label": "Test condition",
+      "definition": "Public demonstration field: test condition.",
+      "groups": [],
+      "owner_kinds": [
+        "reported_test",
+        "method_definition"
+      ],
+      "value_kinds": [
+        "scalar",
+        "text",
+        "record",
+        "list"
+      ],
+      "profile_ids": [
+        "public-condition-thickness-v1"
+      ],
+      "version": "1"
+    },
+    {
+      "field_id": "observation.value",
+      "label": "Observed value",
+      "definition": "Public demonstration field: observed value.",
+      "groups": [],
+      "owner_kinds": [
+        "observation"
+      ],
+      "value_kinds": [
+        "scalar",
+        "text",
+        "record",
+        "list"
+      ],
+      "profile_ids": [
+        "public-observation-width-v1"
+      ],
+      "version": "1"
+    },
+    {
+      "field_id": "process.parameter",
+      "label": "Process condition",
+      "definition": "Public demonstration field: process condition.",
+      "groups": [],
+      "owner_kinds": [
+        "process_definition"
+      ],
+      "value_kinds": [
+        "scalar",
+        "text",
+        "record",
+        "list"
+      ],
+      "profile_ids": [],
+      "version": "1"
+    },
+    {
+      "field_id": "claim.text",
+      "label": "Reported claim",
+      "definition": "Public demonstration field: reported claim.",
+      "groups": [],
+      "owner_kinds": [
+        "claim"
+      ],
+      "value_kinds": [
+        "text"
+      ],
+      "profile_ids": [],
+      "version": "1"
+    }
+  ],
+  "profiles": [
+    {
+      "profile_id": "public-condition-thickness-v1",
+      "field_id": "condition.parameter",
+      "qualifiers": {
+        "property": "thickness",
+        "parameter_label": "thickness",
+        "parameter_id": "source_key:thickness"
+      },
+      "owner_kinds": [
+        "reported_test",
+        "method_definition"
+      ],
+      "definition": "Synthetic example: specimen thickness.",
+      "version": "1"
+    },
+    {
+      "profile_id": "public-observation-width-v1",
+      "field_id": "observation.value",
+      "qualifiers": {
+        "property": "width",
+        "metric_label": "width",
+        "metric_id": "source_key:width"
+      },
+      "owner_kinds": [
+        "observation"
+      ],
+      "definition": "Synthetic example: specimen width.",
+      "version": "1"
+    }
+  ]
+}

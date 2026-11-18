@@ -1,0 +1,157 @@
+/* Scoped to paper and patent review; warnings appear only when requested. */
+.document-candidate-review button.rr-issue-trigger {
+  display: block;
+  min-height: 30px;
+  padding: 2px 0;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--rr-warn);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.document-candidate-review button.rr-issue-trigger:hover { background: var(--rr-warn-bg); }
+.document-candidate-review .rr-issue-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(32 56 50 / 28%);
+}
+.document-candidate-review .rr-issue-dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(620px, 100%);
+  max-height: min(640px, calc(100dvh - 40px));
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid #e8cd9b;
+  border-radius: 14px;
+  background: var(--rr-warn-bg);
+  color: var(--rr-warn);
+  box-shadow: 0 16px 48px rgb(32 56 50 / 20%);
+}
+.document-candidate-review .rr-issue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ead8b8;
+}
+.document-candidate-review button.rr-issue-close { border-color: #dcc49b; background: transparent; }
+.document-candidate-review .rr-issue-body {
+  min-height: 0;
+  padding: 18px 20px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  overflow-wrap: anywhere;
+}
+.document-candidate-review .rr-issue-body:focus-visible { outline: 2px solid var(--rr-warn); outline-offset: -4px; }
+.document-candidate-review .rr-issue-name { font-weight: 600; }
+.document-candidate-review .rr-issue-list { margin: 12px 0 0; padding-left: 22px; }
+.document-candidate-review .rr-issue-list li + li { margin-top: 12px; }
+
+.document-candidate-review .rr-title-group { display: flex; flex: 1; min-width: 0; align-items: center; flex-wrap: wrap; gap: 10px; }
+.document-candidate-review .rr-top .rr-title-group h2 { flex: 0 1 auto; min-width: 0; }
+.document-candidate-review button.rr-scope-issue-trigger { display: inline-flex; flex-shrink: 0; color: var(--rr-muted); }
+.document-candidate-review button.rr-scope-issue-trigger:hover { background: var(--rr-active); }
+.document-candidate-review button.rr-issue-trigger[data-issue-state="reviewed"] { color: var(--rr-muted); }
+.document-candidate-review button.rr-issue-trigger[data-issue-state="reviewed"]:hover { background: var(--rr-active); }
+.document-candidate-review .rr-issue-dialog[data-issue-state="reviewed"] { color: var(--rr-text); background: #fff; border-color: var(--rr-line); }
+.document-candidate-review .rr-issue-dialog[data-issue-state="reviewed"] .rr-issue-header { border-color: var(--rr-line); }
+
+/* Edits stay in a modal working copy until explicitly saved as a local draft. */
+.document-candidate-review .rr-edit-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(32 56 50 / 28%);
+}
+.document-candidate-review .rr-edit-dialog {
+  display: flex;
+  flex-direction: column;
+  width: min(680px, 100%);
+  max-height: calc(100dvh - 40px);
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid var(--rr-line);
+  border-radius: 14px;
+  background: var(--rr-paper);
+  box-shadow: 0 16px 48px rgb(32 56 50 / 20%);
+}
+.document-candidate-review .rr-edit-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--rr-line);
+}
+.document-candidate-review .rr-edit-header h3 { min-width: 0; overflow-wrap: anywhere; }
+.document-candidate-review .rr-edit-close { flex-shrink: 0; }
+.document-candidate-review .rr-edit-dialog .rr-editor {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.document-candidate-review .rr-edit-body {
+  display: grid;
+  min-height: 0;
+  gap: 12px;
+  padding: 18px 20px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  overflow-wrap: anywhere;
+}
+.document-candidate-review .rr-edit-body > .rr-link { justify-self: start; }
+.document-candidate-review .rr-edit-dialog .rr-edit-actions {
+  flex: 0 0 auto;
+  padding: 12px 20px;
+  border-top: 1px solid var(--rr-line);
+  background: var(--rr-paper);
+}
+@media (max-width: 560px) {
+  .document-candidate-review .rr-edit-overlay { padding: 12px; }
+  .document-candidate-review .rr-edit-dialog { max-height: calc(100dvh - 24px); }
+  .document-candidate-review .rr-edit-dialog .rr-editor-grid { grid-template-columns: 1fr; }
+}
+
+.document-candidate-review .rr-save-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(32 56 50 / 28%);
+}
+.document-candidate-review .rr-save-dialog {
+  width: min(460px, 100%);
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+  padding: 24px;
+  border: 1px solid var(--rr-line);
+  border-radius: 14px;
+  background: var(--rr-paper);
+  box-shadow: 0 16px 48px rgb(32 56 50 / 20%);
+}
+.document-candidate-review .rr-save-dialog h3 { margin: 0 0 16px; }
+.document-candidate-review .rr-save-time { overflow-wrap: anywhere; }
+.document-candidate-review .rr-save-dialog > button { display: block; margin: 20px 0 0 auto; }
+.study-unit-wiki{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}.study-unit-wiki[hidden]{display:none}.wiki-study-evidence{margin:12px 0}.wiki-study-evidence blockquote{white-space:pre-wrap;margin:8px 0;padding-left:12px;border-left:2px solid var(--border,#d4d4d4)}
